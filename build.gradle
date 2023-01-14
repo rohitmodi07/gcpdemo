@@ -6,7 +6,6 @@ plugins {
 
 group = 'com.techmaze'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '17'
 
 configurations {
 	compileOnly {
