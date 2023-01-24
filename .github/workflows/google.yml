@@ -46,7 +46,7 @@ jobs:
           settings-path: ${{ github.workspace }}
 
     - name: Build with gradle
-      run: ./gradlew clean build -x test
+      run: gradle clean build -x test
 
     - name: Setup Google Cloud CLI
       uses: GoogleCloudPlatform/github-actions/setup-gcloud@0.1.3
