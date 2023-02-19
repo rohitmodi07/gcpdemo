@@ -42,11 +42,6 @@ jobs:
 
     - name: Build with gradle
       run: gradle clean build -x test
-
-    - id: 'auth'
-      uses: 'google-github-actions/auth@v1'
-      with:
-        credentials_json: '${{ secrets.GKE_SA_KEY }}'
         
     - name: Setup Google Cloud CLI
       uses: google-github-actions/setup-gcloud@v1
