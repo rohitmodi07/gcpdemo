@@ -43,8 +43,13 @@ jobs:
     - name: Build with gradle
       run: gradle clean build -x test
 
+    - id: 'auth'
+      uses: 'google-github-actions/auth@v1'
+      with:
+        credentials_json: '${{ secrets.GKE_SA_KEY }}'
+        
     - name: Setup Google Cloud CLI
-      uses: GoogleCloudPlatform/github-actions/setup-gcloud@0.1.3
+      uses: google-github-actions/setup-gcloud@v1
       env:
           ACTIONS_ALLOW_UNSECURE_COMMANDS: true
       with:
